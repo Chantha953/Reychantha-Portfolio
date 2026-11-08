@@ -42,11 +42,14 @@ const Header = () => {
             </nav>
             <div className="header-cta d-flex justify-content-between align-items-center gap-3">
                 <button className="btn shadow-header-item fw-medium rounded-5 px-3 py-1 border-0">Download CV</button>
-                <button className="btn text-white shadow-header-item rounded-5 btnMenu d-flex justify-content-center align-items-center d-lg-none" onClick={handleMenu}>
+                <button
+                    className="btn border-0 text-white shadow-header-item rounded-5 btnMenu d-flex justify-content-center align-items-center d-lg-none"
+                    onClick={handleMenu}
+                >
                     {menuOpen ? (
-                        <VscCloseCompact className="iconMenu text-black" />
+                        <VscCloseCompact className="iconMenu text-black" size={16} />
                     ) : (
-                        <SlMenu className="iconMenu text-black" />
+                        <SlMenu className="iconMenu text-black" size={16} />
                     )}
                 </button>
             </div>

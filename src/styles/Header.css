@@ -35,12 +35,20 @@ header {
 }
 
 .btnMenu {
-    width: 32px;
-    height: 32px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  flex-shrink: 0;
+  .iconMenu {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    transition: transform 0.2s linear;
 
-    .iconMenu {
-        scale: 2.5;
+    &:active {
+      transform: rotateX(80deg);
     }
+  }
 }
 @media screen and (max-width: 992px) {
     .nav-bar {
