@@ -7,7 +7,7 @@ const MainLayout = () =>{
             <div>
                 <Header/>
             </div>
-            <div className="container mt-5">
+            <div className="container">
                 <Outlet/>
             </div>
         </div>

@@ -1,0 +1,85 @@
+.btnSocial {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    overflow: visible;
+
+    .iconSocail {
+        transition: transform 0.1s ease;
+    }
+
+    &::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%) translateY(5px);
+
+        padding: 5px 10px;
+        border-radius: 8px;
+        background: #f0f0f0;
+        color: #333333;
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: all 0.1s ease;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    &:hover .iconSocail {
+        transform: scale(1.1);
+    }
+    &:active {
+        border-radius: 50px;
+        background: #e0e0e0;
+        box-shadow: inset 5px 5px 9px #e2e2e2,
+            inset -5px -5px 9px #fefefe;
+        .iconSocail {
+            transform: scale(1);
+        }
+    }
+
+}
+
+.btnHireMe .icon {
+    transition: .1s ease-in-out;
+}
+
+.btnHireMe:hover {
+    .icon {
+        transform: translateX(1.5px);
+    }
+}
+@media screen and (max-width : 768px) {
+    .home{
+        flex-direction: column;
+    }
+    .home .info{
+        height: 65vh !important;
+    }
+    .home .bg-pfp{
+        justify-content: center !important;
+    }
+    .profile{
+        max-width: 400px !important;
+    }
+}
+@media screen and (max-width : 430px) {
+    .home .info{
+      
+    }
+    .home .mainSocial{
+        gap: 10px !important;
+    }
+}

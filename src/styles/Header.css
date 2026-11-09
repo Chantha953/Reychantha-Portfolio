@@ -16,13 +16,6 @@ header {
     justify-content: space-between;
 }
 
-.shadow-header-item {
-    border-radius: 50px;
-    background: #f0f0f0;
-    box-shadow: 5px 5px 8px #e2e2e2,
-        -5px -5px 8px #fefefe;
-}
-
 .main-nav .nav-link {
     border: 1px solid transparent;
     font-size: 15px;
@@ -35,21 +28,23 @@ header {
 }
 
 .btnMenu {
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  flex-shrink: 0;
-  .iconMenu {
-    width: 16px;
-    height: 16px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
     flex-shrink: 0;
-    transition: transform 0.2s linear;
 
-    &:active {
-      transform: rotateX(80deg);
+    .iconMenu {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        transition: transform 0.2s linear;
+
+        &:active {
+            transform: rotateX(80deg);
+        }
     }
-  }
 }
+
 @media screen and (max-width: 992px) {
     .nav-bar {
         position: fixed;
@@ -83,5 +78,11 @@ header {
         pointer-events: auto;
         flex-direction: column;
         justify-content: center !important;
+    }
+    .profile{
+        max-width: 290px !important;
+    }
+    .btnHireMe{
+        width: max-content;
     }
 }

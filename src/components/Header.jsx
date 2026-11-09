@@ -5,6 +5,7 @@ import { TiThMenu } from 'react-icons/ti';
 import { useEffect, useState } from 'react';
 import { SlMenu } from 'react-icons/sl';
 import { VscCloseCompact } from 'react-icons/vsc';
+import { HiDownload } from 'react-icons/hi';
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const location = useLocation();
@@ -16,13 +17,13 @@ const Header = () => {
     }, [location]);
     return (
         <header className="container d-flex justify-content-between align-items-center">
-            <div className="px-3 py-1 rounded-5">
+            <div className="rounded-5">
                 <a href="/" className="text-name text-decoration-none text-black fw-medium">
                     Rey Chantha &lt;/&gt;
                 </a>
             </div>
             <nav className="main-nav m-0" aria-label="Main navigation">
-                <ul className={`nav-bar d-flex align-items-center list-unstyled px-1 py-1 m-0 shadow-header-item ${menuOpen ? "open" : ""}`}>
+                <ul className={`nav-bar d-flex align-items-center list-unstyled px-1 py-1 m-0 shadow-item ${menuOpen ? "open" : ""}`}>
                     <li className="nav-item">
                         <NavLink className="nav-link fw-medium px-4 rounded-5 text-decoration-none" to="/" end>Home</NavLink>
                     </li>
@@ -41,9 +42,10 @@ const Header = () => {
                 </ul>
             </nav>
             <div className="header-cta d-flex justify-content-between align-items-center gap-3">
-                <button className="btn shadow-header-item fw-medium rounded-5 px-3 py-1 border-0">Download CV</button>
+                <button className="btn shadow-item fw-medium rounded-5 px-3 py-1 border-0 d-flex justify-content-center align-items-center"><HiDownload className="me-1" size={18} />
+                    Download CV</button>
                 <button
-                    className="btn border-0 text-white shadow-header-item rounded-5 btnMenu d-flex justify-content-center align-items-center d-lg-none"
+                    className="btn border-0 text-white shadow-item rounded-5 btnMenu d-flex justify-content-center align-items-center d-lg-none"
                     onClick={handleMenu}
                 >
                     {menuOpen ? (
