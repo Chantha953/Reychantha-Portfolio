@@ -1,9 +1,16 @@
-body{
+body {
     background-color: #f0f0f0 !important;
+    height: 200vh;
 }
+
+.liquid-glass-bg {
+    background-color: rgba(224, 224, 224, 0.65);
+    backdrop-filter: blur(0.5px) url(#lg-filter) blur(1px) saturate(1.5) brightness(1.02);
+    -webkit-backdrop-filter: blur(8px) saturate(1.8) brightness(1.15) contrast(1.05);
+}
+
 .shadow-item {
     border-radius: 50px;
-    background: #f0f0f0;
     box-shadow: 5px 5px 8px #e2e2e2,
         -5px -5px 8px #fefefe;
 }

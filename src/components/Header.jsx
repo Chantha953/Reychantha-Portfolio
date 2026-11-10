@@ -15,6 +15,12 @@ const Header = () => {
     useEffect(() => {
         setMenuOpen(false);
     }, [location]);
+    useEffect(()=>{
+        document.body.style.overflowY = menuOpen?"hidden":"auto";
+        return ()=>{
+            document.body.style.overflowY = "auto";
+        }
+    })
     return (
         <header className="container d-flex justify-content-between align-items-center">
             <div className="rounded-5">
@@ -23,7 +29,7 @@ const Header = () => {
                 </a>
             </div>
             <nav className="main-nav m-0" aria-label="Main navigation">
-                <ul className={`nav-bar d-flex align-items-center list-unstyled px-1 py-1 m-0 shadow-item ${menuOpen ? "open" : ""}`}>
+                <ul className={`nav-bar d-flex align-items-center list-unstyled bg-transparent px-1 py-1 m-0 border rounded-5 ${menuOpen ? "open" : ""}`}>
                     <li className="nav-item">
                         <NavLink className="nav-link fw-medium px-4 rounded-5 text-decoration-none" to="/" end>Home</NavLink>
                     </li>
@@ -42,10 +48,10 @@ const Header = () => {
                 </ul>
             </nav>
             <div className="header-cta d-flex justify-content-between align-items-center gap-3">
-                <button className="btn shadow-item fw-medium rounded-5 px-3 py-1 border-0 d-flex justify-content-center align-items-center"><HiDownload className="me-1" size={18} />
+                <button className="liquid-glass-bg btn btnCv border fw-medium rounded-5 px-3 py-1 d-flex justify-content-center align-items-center"><HiDownload className="me-1" size={18} />
                     Download CV</button>
                 <button
-                    className="btn border-0 text-white shadow-item rounded-5 btnMenu d-flex justify-content-center align-items-center d-lg-none"
+                    className="liquid-glass-bg btn border text-white rounded-5 btnMenu d-flex justify-content-center align-items-center d-lg-none"
                     onClick={handleMenu}
                 >
                     {menuOpen ? (

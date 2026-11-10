@@ -14,6 +14,9 @@ header {
 .nav-bar {
     width: 600px;
     justify-content: space-between;
+    background-color: rgba(224, 224, 224, 0.65);
+    backdrop-filter: blur(0.5px) url(#lg-filter) blur(1px) saturate(1.5) brightness(1.02);
+    -webkit-backdrop-filter: blur(8px) saturate(1.8) brightness(1.15) contrast(1.05);
 }
 
 .main-nav .nav-link {
@@ -24,7 +27,8 @@ header {
 }
 
 .active {
-    border: 1px solid gray !important;
+    /* border: 1px solid dodgerblue !important; */
+    color: dodgerblue !important;
 }
 
 .btnMenu {
@@ -44,7 +48,6 @@ header {
         }
     }
 }
-
 @media screen and (max-width: 992px) {
     .nav-bar {
         position: fixed;
@@ -78,11 +81,18 @@ header {
         pointer-events: auto;
         flex-direction: column;
         justify-content: center !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border: none !important;
+        background-color: white !important;
+        border-radius: 0px !important;
     }
-    .profile{
+
+    .profile {
         max-width: 290px !important;
     }
-    .btnHireMe{
+
+    .btnHireMe {
         width: max-content;
     }
 }
