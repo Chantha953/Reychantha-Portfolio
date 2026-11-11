@@ -24,7 +24,7 @@ const Header = () => {
     return (
         <header className="container d-flex justify-content-between align-items-center">
             <div className="rounded-5">
-                <a href="/" className="text-name text-decoration-none text-black fw-medium">
+                <a href="/" className="liquid-glass-bg txtLogo rounded-5 text-name text-decoration-none text-black fw-medium" style={{padding :"5.5px 16px"}}>
                     Rey Chantha &lt;/&gt;
                 </a>
             </div>
@@ -48,7 +48,7 @@ const Header = () => {
                 </ul>
             </nav>
             <div className="header-cta d-flex justify-content-between align-items-center gap-3">
-                <button className="liquid-glass-bg btn btnCv border fw-medium rounded-5 px-3 py-1 d-flex justify-content-center align-items-center"><HiDownload className="me-1" size={18} />
+                <button className="liquid-glass-bg btn btnCv border fw-medium rounded-5 d-flex justify-content-center align-items-center" style={{padding :"5.5px 16px"}}><HiDownload className="me-1" size={18} />
                     Download CV</button>
                 <button
                     className="liquid-glass-bg btn border text-white rounded-5 btnMenu d-flex justify-content-center align-items-center d-lg-none"

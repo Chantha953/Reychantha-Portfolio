@@ -14,7 +14,7 @@ header {
 .nav-bar {
     width: 600px;
     justify-content: space-between;
-    background-color: rgba(224, 224, 224, 0.65);
+    background-color: #f0f0f000 !important;
     backdrop-filter: blur(0.5px) url(#lg-filter) blur(1px) saturate(1.5) brightness(1.02);
     -webkit-backdrop-filter: blur(8px) saturate(1.8) brightness(1.15) contrast(1.05);
 }
@@ -23,7 +23,7 @@ header {
     border: 1px solid transparent;
     font-size: 15px;
     transition: all 0.1s linear;
-    padding: 3px 0px;
+    padding: 1px 0px;
 }
 
 .active {
@@ -48,6 +48,7 @@ header {
         }
     }
 }
+
 @media screen and (max-width: 992px) {
     .nav-bar {
         position: fixed;
@@ -63,7 +64,7 @@ header {
         flex-direction: column;
         justify-content: center !important;
         border-radius: 0;
-        background: #f0f0f0;
+        background: #e6e6e600;
         box-shadow: none;
         transition:
             height 0.25s ease,
