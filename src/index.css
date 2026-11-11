@@ -1,3 +1,4 @@
+
 body {
     background-color: #f0f0f0 !important;
     height: 200vh;
@@ -5,8 +6,9 @@ body {
 
 .liquid-glass-bg {
     background-color: #f0f0f000 !important;
-    backdrop-filter: blur(0.5px) url(#lg-filter) blur(1px) saturate(1.5) brightness(1.02);
+
     -webkit-backdrop-filter: blur(8px) saturate(1.8) brightness(1.15) contrast(1.05);
+    backdrop-filter: blur(0.5px) url(#lg-filter) blur(1px) saturate(1.5) brightness(1.02);
 }
 
 .shadow-item {
@@ -15,9 +17,9 @@ body {
         -5px -5px 8px #fefefe;
 }
 
-@media screen and (max-width : 992px) {
+@media screen and (max-width: 992px) {
     .liquid-glass-bg {
-        backdrop-filter: blur(0.1px) url(#lg-filter) blur(0.2px) saturate(1.5) brightness(1.02) !important;
         -webkit-backdrop-filter: blur(8px) saturate(1.8) brightness(1.15) contrast(1.05) !important;
+        backdrop-filter: blur(0.1px) url(#lg-filter) blur(0.2px) saturate(1.5) brightness(1.02) !important;
     }
 }
